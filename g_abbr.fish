@@ -2,7 +2,6 @@
 # The following code is taken from https://github.com/fish-shell/fish-shell/issues/731
 # 
 
-
 function __fish_expand_globabbreviation
 #    if test (count (commandline -poc)) -eq 0
         set -l token (commandline -t)
