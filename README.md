@@ -19,5 +19,5 @@ Put `g_abbr.fish` into `~/.config/fish/conf.d/g_abbr.fish`
   globabbr  G   '| grep'
 ```
 
-Now you easily may type:   `ls -l G<space>` and get `ls -l | grep` 
+Now you easily type :   `ls -l G<space>` and get `ls -l | grep` 
 
