@@ -57,7 +57,7 @@ function globabbr --description 'Define a new abbreviation'
 
     echo $argv | read -l abbreviation command
     # uncommented the following line to make it work the way I want
-    # eval "function $abbreviation; $command \$argv; end"
+    eval "function $abbreviation; $command \$argv; end"
     globabbreviations -e $abbreviation
 
     set -U fish_globabbreviations $fish_globabbreviations "$argv"
