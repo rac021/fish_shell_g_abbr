@@ -1,4 +1,4 @@
-## fish_shell_g_abbr
+## fish_shell_g_abbr ( fish shell global abbr )
 
 ### Installation
 
