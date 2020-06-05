@@ -3,18 +3,20 @@
 # 
 
 function __fish_expand_globabbreviation
-#    if test (count (commandline -poc)) -eq 0
-        set -l token (commandline -t)
 
-        if globabbreviations -q $token
-            commandline -t (globabbreviations $token)
-        end
-#    end
+ #    if test (count (commandline -poc)) -eq 0
+         set -l token (commandline -t)
+
+         if globabbreviations -q $token
+             commandline -t (globabbreviations $token)
+         end
+ #     end
 end
 
 bind \  '__fish_expand_globabbreviation; commandline -i " "'
 bind \r '__fish_expand_globabbreviation; commandline -f execute'
-# bind \n '__fish_expand_abbreviation; commandline -f execute'
+
+bind -k nul 'commandline -i " "' # When Ctrl-space -> then ignore globabbreviations : Just insert space
 
 function globabbreviations --description 'List, show and query abbreviations'
     if test (count $argv) = 0
